@@ -7,7 +7,7 @@ st.set_page_config(page_title="Movie Review Sentiment Analysis")
 BASE_DIR = os.path.dirname(__file__)
 
 # Debug: show files (remove later)
-# st.write("Files in app directory:", os.listdir(BASE_DIR))
+st.write("Files in app directory:", os.listdir(BASE_DIR))
 
 # Load model and tfidf
 model_path = os.path.join(BASE_DIR, "model.pk")
@@ -31,3 +31,4 @@ if st.button("Predict"):
             st.error("Negative Review 😞")
         else:
             st.success("Positive Review 😊")
+
